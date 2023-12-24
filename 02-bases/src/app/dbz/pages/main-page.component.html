@@ -1,0 +1,15 @@
+<h1>Agregar Personajes</h1>
+<hr>
+
+<div class="row">
+
+    <div class="col">
+        <!--       COMPONENTE HIJO recibe de PADRE -->
+        <dbz-list [characterList]="dbzService.characters" (onDelete)="dbzService.onDeleteCharacter($event)"></dbz-list>
+    </div>
+
+    <div class="col">
+        <!--                COMPONENTE HIJO a  COMPONENTE PADRE -->
+        <dbz-add-character (onNewCharacter2)="dbzService.onNewCharacter"></dbz-add-character>
+    </div>
+</div>
